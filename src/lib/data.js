@@ -2,12 +2,21 @@ export const destinations = [
   {
     slug: "chine",
     nom: "Chine",
-    alt: "Vue de la Chine",
-    resume: "Commerce, marchés et fournisseurs",
+    resume: "Usines, marchés de gros et fournisseurs",
     titre: "La Chine, au cœur des opportunités commerciales.",
     description:
-      "Business Trips en Chine : découverte des marchés, rencontres avec des fournisseurs et accompagnement sur place, en format multisectoriel ou spécialisé.",
-    texte: "Deux formats complémentaires, tous deux accessibles selon votre profil et vos objectifs.",
+      "Business Trips en Chine : visites d’usines, marchés de gros et rencontres avec des fournisseurs, en format multisectoriel ou spécialisé.",
+    texte: "L’un des premiers centres de production au monde : la Chine réunit usines, marchés de gros et fournisseurs dans presque tous les secteurs. Un Business Trip permet de voir la production de ses propres yeux, de comparer les prix et de rencontrer les décideurs sans intermédiaire.",
+    commerceTitre: "Au plus près des usines et des marchés de gros.",
+    commerce: [
+      { titre: "Visiter les usines", texte: "Rencontrer les fabricants sur leur site permet de vérifier les capacités de production, la qualité, les délais et les quantités minimales de commande. Selon le programme confirmé, des visites d’usines et d’ateliers peuvent être organisées dans vos secteurs d’intérêt." },
+      { titre: "Explorer les marchés de gros", texte: "Dans les villes spécialisées, des marchés et des centres commerciaux réunissent des milliers de fournisseurs au même endroit : mode, accessoires, beauté, décoration, articles de maison, électronique. Vous comparez produits, prix et conditions en quelques jours. Selon les dates, des salons professionnels peuvent compléter le programme." },
+      { titre: "Négocier et sécuriser vos achats", texte: "Prix, quantités minimales, échantillons, délais de fabrication, modes de paiement et d’expédition : nous vous aidons à préparer vos questions et à comprendre les étapes d’un achat en Chine, jusqu’au transport vers votre pays." },
+    ],
+    photos: [
+      { src: "/images/destinations/chine-1.jpg", w: 2000, h: 1333, credit: "Hyunwon Jang", alt: "Rue commerçante illuminée de néons en Chine, de nuit, avec une foule de passants" },
+      { src: "/images/destinations/chine-2.jpg", w: 1800, h: 1200, credit: "Sergio Kian", alt: "Rue marchande animée en Chine, avec enseignes lumineuses, étals et passants" },
+    ],
     formats: [
       { nom: "Multisectoriel", tag: "Offre à la une", texte: "Découvrez plusieurs univers commerciaux : mode, beauté, décoration, équipements et autres secteurs selon le programme." },
       { nom: "Spécialisé", tag: "Accompagnement ciblé", texte: "Vous avez une activité ou un secteur précis ? Faites-nous part de vos besoins pour étudier des visites et rencontres ciblées." },
@@ -18,12 +27,22 @@ export const destinations = [
   {
     slug: "turquie",
     nom: "Turquie",
-    alt: "Vue de la Turquie",
-    resume: "Mode, textile, construction et intérieur",
+    resume: "Textile, confection, construction et intérieur",
     titre: "Un carrefour d’opportunités pour vos ambitions.",
     description:
-      "Business Trips en Turquie : mode, textile, construction et aménagement intérieur, avec un programme ciblé ou multisectoriel.",
-    texte: "Mode, textile, construction et aménagement intérieur : le programme peut être ciblé ou combiner plusieurs secteurs selon les préinscriptions et la cohérence des visites.",
+      "Business Trips en Turquie : ateliers de confection, grossistes en textile, matériaux de construction et aménagement intérieur, avec un programme ciblé ou multisectoriel.",
+    texte: "Savoir-faire textile, confection, matériaux de construction : la Turquie est un pays de production reconnu, situé entre l’Europe, l’Afrique et le Moyen-Orient. Le programme peut être ciblé ou combiner plusieurs secteurs selon les préinscriptions et la cohérence des visites.",
+    commerceTitre: "Un savoir-faire textile et industriel aux portes de l’Europe.",
+    commerce: [
+      { titre: "Mode, textile et confection", texte: "Istanbul concentre ateliers de confection, grossistes en prêt-à-porter, tissus, tenues de cérémonie et accessoires. Selon le programme, vous pourrez visiter des fabricants et des quartiers de gros, et comparer collections, finitions et conditions de commande." },
+      { titre: "Construction et aménagement intérieur", texte: "Carrelage, marbre et pierre naturelle, mobilier, luminaires, quincaillerie, sanitaire : la Turquie produit une large gamme de matériaux pour la construction et la décoration. Des visites de fabricants et de showrooms permettent d’évaluer la qualité avant de commander." },
+      { titre: "Un pays proche de vos marchés", texte: "Sa position entre l’Europe, l’Afrique et le Moyen-Orient peut raccourcir les délais de transport. Nous vous aidons à préparer vos rendez-vous, vos questions aux fournisseurs et les étapes de l’import vers votre pays." },
+    ],
+    photos: [
+      { src: "/images/destinations/turquie-1.jpg", w: 2000, h: 1333, credit: "Anna Berdnik", alt: "La tour de Galata dominant les toits d’Istanbul, avec des mouettes dans le ciel" },
+      { src: "/images/destinations/turquie-2.jpg", w: 1800, h: 1200, credit: "Igor Sporynin", alt: "Rue commerçante animée d’Istanbul, avec boutiques, bureaux de change et passants" },
+      { src: "/images/destinations/turquie-3.jpg", w: 1800, h: 1202, credit: "Ali Nazari", alt: "Rue d’Istanbul avec boutiques de mode et de tenues de cérémonie, remplie de passants" },
+    ],
     formats: [],
     tags: ["Mode et textile", "Construction et aménagement"],
     secteurs: "Textile, prêt-à-porter, matériaux, construction et aménagement intérieur.",
@@ -31,12 +50,22 @@ export const destinations = [
   {
     slug: "dubai",
     nom: "Dubaï",
-    alt: "Vue de Dubaï",
-    resume: "Networking, création et investissement",
+    resume: "Négoce, souks, création d’entreprise et investissement",
     titre: "Là où les idées rencontrent les opportunités.",
     description:
-      "Business Trip à Dubaï : rencontres professionnelles, écosystème entrepreneurial, création d’entreprise, implantation et pistes d’investissement.",
+      "Business Trip à Dubaï : négoce international, souks et grossistes, rencontres professionnelles, création d’entreprise, implantation et pistes d’investissement.",
     texte: "Un séjour équilibré entre rencontres professionnelles, découverte de l’écosystème entrepreneurial, création d’entreprise, implantation et exploration de pistes d’investissement. Les interventions spécialisées sont soumises à confirmation.",
+    commerceTitre: "Un carrefour du commerce entre l’Asie, l’Afrique et l’Europe.",
+    commerce: [
+      { titre: "Une plateforme du négoce", texte: "Grâce à son grand port, à son aéroport international et à ses zones franches, Dubaï est un point de passage majeur pour les marchandises entre l’Asie, l’Afrique, le Moyen-Orient et l’Europe. Les sociétés de négoce, d’import-export et de distribution y sont nombreuses." },
+      { titre: "Souks, grossistes et centres commerciaux", texte: "Des souks traditionnels aux centres de gros, on y trouve textiles, vêtements, bijoux et or, articles-cadeaux, parfums, électronique et produits de consommation. Selon le programme, des visites de marchés et de grossistes permettent de comparer produits et conditions." },
+      { titre: "Créer ou implanter votre activité", texte: "Zones franches, formes de sociétés, licences, bureaux, démarches : nous vous aidons à comprendre les options d’implantation et à rencontrer des professionnels du terrain. Les interventions spécialisées sont soumises à confirmation." },
+    ],
+    photos: [
+      { src: "/images/destinations/dubai-1.jpg", w: 2000, h: 1333, credit: "Darcey Beau", alt: "Avenue de Dubaï bordée de gratte-ciel, en fin de journée" },
+      { src: "/images/destinations/dubai-2.jpg", w: 1058, h: 1600, credit: "Rumman Amin", alt: "Boutique de textiles et de souvenirs dans un souk de Dubaï, avec foulards et étoles exposés" },
+      { src: "/images/destinations/dubai-3.jpg", w: 1200, h: 1600, credit: "Ken S", alt: "Vitrine de bijoux en or dans un souk de Dubaï" },
+    ],
     formats: [],
     tags: ["Networking", "Découverte entrepreneuriale", "Implantation", "Investissement"],
     secteurs: "Commerce, distribution et approvisionnements selon votre projet.",
