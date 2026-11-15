@@ -3,7 +3,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { btnDark } from "@/lib/ui";
 
-const MAX = 8 * 1024 * 1024;
+// Limite du fichier joint (4 Mo par défaut : plafond de Vercel). Modifiable avec NEXT_PUBLIC_MAX_UPLOAD_MB.
+const MAX_MB = Number(process.env.NEXT_PUBLIC_MAX_UPLOAD_MB) || 4;
+const MAX = MAX_MB * 1024 * 1024;
 
 function useEnvoi() {
   const router = useRouter();
@@ -28,7 +30,7 @@ function useEnvoi() {
   function verifierFichier(e) {
     const f = e.target.files[0];
     if (f && f.size > MAX) {
-      setErreur("Le fichier dépasse 8 Mo. Choisissez un fichier plus léger.");
+      setErreur(`Le fichier dépasse ${MAX_MB} Mo. Choisissez un fichier plus léger.`);
       e.target.value = "";
     } else setErreur("");
   }
@@ -86,7 +88,7 @@ export function FormulaireDevis({ formule = "" }) {
       <label className="champ mt-5">Produits recherchés, quantités et précisions
         <textarea name="besoin" rows={5} required placeholder="Décrivez votre projet, les quantités, les caractéristiques et les références souhaitées." />
       </label>
-      <label className="champ mt-5">Photos ou document de référence (JPG, PNG ou PDF, 8 Mo maximum)
+      <label className="champ mt-5">Photos ou document de référence (JPG, PNG ou PDF, {MAX_MB} Mo maximum)
         <input name="reference-produit" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" onChange={verifierFichier} />
       </label>
       <Consentement />

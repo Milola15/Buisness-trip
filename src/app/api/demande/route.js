@@ -2,7 +2,8 @@ import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
-const MAX = 8 * 1024 * 1024;
+const MAX_MB = Number(process.env.NEXT_PUBLIC_MAX_UPLOAD_MB) || 4;
+const MAX = MAX_MB * 1024 * 1024;
 const TYPES = ["image/jpeg", "image/png", "application/pdf"];
 const champsParType = {
   sourcing: [
@@ -47,7 +48,7 @@ export async function POST(req) {
   const attachments = [];
   const fichier = fd.get("reference-produit");
   if (type === "sourcing" && fichier && typeof fichier === "object" && fichier.size > 0) {
-    if (fichier.size > MAX) return erreur("Le fichier dépasse 8 Mo.");
+    if (fichier.size > MAX) return erreur(`Le fichier dépasse ${MAX_MB} Mo.`);
     if (!TYPES.includes(fichier.type)) return erreur("Format de fichier non accepté (JPG, PNG ou PDF).");
     attachments.push({ filename: fichier.name, content: Buffer.from(await fichier.arrayBuffer()), contentType: fichier.type });
   }
