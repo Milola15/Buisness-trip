@@ -48,7 +48,7 @@ export default function NavBar({ items }) {
             N&amp;K <span className="ml-1 font-sans text-sm font-medium text-or-fonce">Global Business</span>
           </Link>
 
-          <nav aria-label="Navigation principale" className="hidden items-center gap-8 text-sm font-medium text-marine md:flex">
+          <nav aria-label="Navigation principale" className="hidden items-center gap-6 text-sm font-medium text-marine md:flex lg:gap-8">
             {items.map((n) => (
               <Link
                 key={n.href}
@@ -59,7 +59,7 @@ export default function NavBar({ items }) {
                 {n.label}
               </Link>
             ))}
-            <Link href="/sourcing/devis" className={btnDark}>Demander un devis</Link>
+            <span className="hidden lg:block"><Link href="/sourcing/devis" className={btnDark}>Demander un devis</Link></span>
           </nav>
 
           <button

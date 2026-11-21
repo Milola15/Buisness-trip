@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
-import { destinations } from "@/lib/data";
+import { destinations, visa } from "@/lib/data";
 import { btnDark, btnGold } from "@/lib/ui";
 
 export function generateStaticParams() {
@@ -47,7 +47,7 @@ export default async function Destination({ params }) {
       <section className="py-16">
         <div className="wrap">
           <h2 className="max-w-3xl font-display text-3xl font-semibold text-marine sm:text-4xl">{d.commerceTitre}</h2>
-          <div className="mt-10 grid gap-10 md:grid-cols-3">
+          <div className={`mt-10 grid gap-10 ${d.commerce.length > 3 ? "sm:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"}`}>
             {d.commerce.map((b) => (
               <div key={b.titre} className="border-t-2 border-or pt-4">
                 <h3 className="font-display text-xl font-semibold text-marine">{b.titre}</h3>
@@ -72,6 +72,19 @@ export default async function Destination({ params }) {
           </div>
         </section>
       )}
+
+      <section className="sombre bg-marine py-14 text-white">
+        <div className="wrap grid items-center gap-8 md:grid-cols-[auto_1fr]">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full border border-or text-or">
+            <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3zM15 3v4h4M9 14l2 2 4-4" /></svg>
+          </span>
+          <div>
+            <h2 className="font-display text-2xl font-semibold sm:text-3xl">{visa.titre}</h2>
+            <p className="mt-2 max-w-3xl text-white/80">{visa.texte}</p>
+            <p className="mt-2 text-sm text-white/60">{visa.note}</p>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-ivoire py-16">
         <div className="wrap">

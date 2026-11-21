@@ -50,16 +50,17 @@ export const destinations = [
   {
     slug: "dubai",
     nom: "Dubaï",
-    resume: "Négoce, souks, création d’entreprise et investissement",
+    resume: "Réseautage, création d’entreprise et investissement",
     titre: "Là où les idées rencontrent les opportunités.",
     description:
-      "Business Trip à Dubaï : négoce international, souks et grossistes, rencontres professionnelles, création d’entreprise, implantation et pistes d’investissement.",
-    texte: "Un séjour équilibré entre rencontres professionnelles, découverte de l’écosystème entrepreneurial, création d’entreprise, implantation et exploration de pistes d’investissement. Les interventions spécialisées sont soumises à confirmation.",
-    commerceTitre: "Un carrefour du commerce entre l’Asie, l’Afrique et l’Europe.",
+      "Business Trip à Dubaï : réseautage professionnel, création d’entreprise, implantation et investissement, puis découverte des souks et des marchés. Démarches de visa prises en charge par notre équipe.",
+    texte: "Dubaï est avant tout une destination de réseautage : rencontres professionnelles, découverte de l’écosystème entrepreneurial, création d’entreprise, implantation et pistes d’investissement. Les souks et les marchés complètent le séjour. Les interventions spécialisées sont soumises à confirmation.",
+    commerceTitre: "Un carrefour d’affaires où se construisent les réseaux.",
     commerce: [
-      { titre: "Une plateforme du négoce", texte: "Grâce à son grand port, à son aéroport international et à ses zones franches, Dubaï est un point de passage majeur pour les marchandises entre l’Asie, l’Afrique, le Moyen-Orient et l’Europe. Les sociétés de négoce, d’import-export et de distribution y sont nombreuses." },
-      { titre: "Souks, grossistes et centres commerciaux", texte: "Des souks traditionnels aux centres de gros, on y trouve textiles, vêtements, bijoux et or, articles-cadeaux, parfums, électronique et produits de consommation. Selon le programme, des visites de marchés et de grossistes permettent de comparer produits et conditions." },
+      { titre: "Réseautage et rencontres professionnelles", texte: "Dubaï réunit entrepreneurs, investisseurs et acteurs du négoce venus du monde entier. Un Business Trip y est avant tout l’occasion d’élargir votre réseau : rencontres professionnelles, échanges avec des entrepreneurs installés sur place et découverte de l’écosystème local." },
       { titre: "Créer ou implanter votre activité", texte: "Zones franches, formes de sociétés, licences, bureaux, démarches : nous vous aidons à comprendre les options d’implantation et à rencontrer des professionnels du terrain. Les interventions spécialisées sont soumises à confirmation." },
+      { titre: "Pistes d’investissement et partenariats", texte: "Selon le programme, vous explorez des pistes d’investissement, d’implantation et de partenariat, et vous échangez avec des professionnels pour en mesurer les opportunités et les démarches à prévoir." },
+      { titre: "Souks et marchés : le réseautage autrement", texte: "Souks, grossistes et centres commerciaux sont aussi des lieux de rencontre. On y échange avec des commerçants et des négociants, on découvre textiles, bijoux et or, parfums ou articles-cadeaux, et l’on comprend comment circulent les marchandises entre l’Asie, l’Afrique et l’Europe. L’objectif est d’abord de créer des contacts." },
     ],
     photos: [
       { src: "/images/destinations/dubai-1.jpg", w: 2000, h: 1333, credit: "Darcey Beau", alt: "Avenue de Dubaï bordée de gratte-ciel, en fin de journée" },
@@ -68,7 +69,7 @@ export const destinations = [
     ],
     formats: [],
     tags: ["Networking", "Découverte entrepreneuriale", "Implantation", "Investissement"],
-    secteurs: "Commerce, distribution et approvisionnements selon votre projet.",
+    secteurs: "Réseautage, création d’entreprise, investissement et négoce, selon votre projet.",
   },
 ];
 
@@ -115,3 +116,9 @@ export const offres = [
     note: "Budget de marchandises à partir de 1 500 €. Honoraires et commission communiqués sur devis.",
   },
 ];
+
+export const visa = {
+  titre: "Nous nous occupons de vos démarches de visa.",
+  texte: "Constitution du dossier, vérification des documents demandés, suivi de la demande : nous vous accompagnons pour que vous partiez l’esprit tranquille. Les pièces à fournir et les délais dépendent de votre nationalité et de la destination ; ils vous sont précisés dès la préinscription.",
+  note: "Les frais éventuels figurent dans la proposition. L’octroi du visa reste de la décision des autorités du pays concerné.",
+};

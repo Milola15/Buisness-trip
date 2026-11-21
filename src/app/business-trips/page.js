@@ -1,19 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { destinations, experiences, etapesTrip } from "@/lib/data";
+import { destinations, experiences, etapesTrip, visa } from "@/lib/data";
 import { btnGold, btnLine } from "@/lib/ui";
 
 export const metadata = {
   title: "Business Trips : Chine, Turquie et Dubaï",
-  description: "Séjours professionnels en Chine, en Turquie et à Dubaï pour visiter des usines et des marchés, rencontrer des fournisseurs et développer votre réseau. Préinscription gratuite.",
+  description: "Séjours professionnels en Chine, en Turquie et à Dubaï pour visiter des usines et des marchés, rencontrer des fournisseurs et développer votre réseau. Démarches de visa prises en charge, préinscription gratuite.",
   alternates: { canonical: "/business-trips" },
 };
 
 const faits = [
   { valeur: "8 jours", texte: "au maximum, trajets compris" },
   { valeur: "Gratuite", texte: "la préinscription, sans engagement" },
-  { valeur: "3 destinations", texte: "Chine, Turquie et Dubaï" },
+  { valeur: "Visa", texte: "démarches gérées par notre équipe" },
   { valeur: "Sur devis", texte: "vols, hébergement et prestations détaillés avant réservation" },
 ];
 
@@ -28,6 +28,7 @@ const questions = [
   { q: "Faut-il avoir une entreprise pour participer ?", r: "Non. Nos groupes accueillent aussi bien les professionnels expérimentés que les personnes qui souhaitent découvrir, s’inspirer et envisager de nouvelles perspectives, même sans projet précis." },
   { q: "La préinscription m’engage-t-elle ?", r: "Non. La préinscription est gratuite et sans engagement ; elle ne constitue pas une réservation. Les conditions de confirmation, de report et d’annulation sont précisées dans les documents contractuels." },
   { q: "Quelle est la durée d’un Business Trip ?", r: "Les séjours durent jusqu’à 8 jours, trajets compris. Les dates et le programme détaillé vous sont communiqués dans la proposition, avant toute décision." },
+  { q: "Qui s’occupe des démarches de visa ?", r: "Nous nous en occupons : nous vous accompagnons dans la constitution du dossier et le suivi de votre demande. Les documents à fournir et les délais dépendent de votre nationalité et de la destination ; ils vous sont précisés dès la préinscription. Les frais éventuels figurent dans la proposition, et l’octroi du visa reste de la décision des autorités du pays concerné." },
   { q: "Que comprend le tarif ?", r: "Les offres sur devis prévoient les vols aller-retour, l’hébergement et les prestations précisées dans la proposition. Dates, activités, inclusions et exclusions sont confirmées avant toute réservation définitive." },
   { q: "Comment les villes et les activités sont-elles choisies ?", r: "Elles dépendent des besoins recueillis lors des préinscriptions et des possibilités d’organisation. Le programme est ensuite confirmé avec vous." },
 ];
@@ -98,6 +99,21 @@ export default function BusinessTrips() {
                 <p className="mt-2 text-white/75">{x.texte}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="wrap">
+          <div className="grid items-center gap-8 border-l-4 border-or bg-ivoire p-8 md:grid-cols-[auto_1fr] md:p-10">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-or-fonce text-or-fonce">
+              <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6V3zM15 3v4h4M9 14l2 2 4-4" /></svg>
+            </span>
+            <div>
+              <h2 className="font-display text-2xl font-semibold text-marine sm:text-3xl">{visa.titre}</h2>
+              <p className="mt-2 max-w-3xl text-brume">{visa.texte}</p>
+              <p className="mt-2 text-sm text-brume">{visa.note}</p>
+            </div>
           </div>
         </div>
       </section>
