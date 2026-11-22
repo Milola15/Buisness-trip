@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 const faits = [
-  { valeur: "8 jours", texte: "au maximum, trajets compris" },
+  { valeur: "5 à 8 jours", texte: "au maximum, trajets compris" },
   { valeur: "Gratuite", texte: "la préinscription, sans engagement" },
   { valeur: "Visa", texte: "démarches gérées par notre équipe" },
   { valeur: "Sur devis", texte: "vols, hébergement et prestations détaillés avant réservation" },

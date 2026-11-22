@@ -1,21 +1,14 @@
-import { Cadre, Trace, Point, Origines, Regions, ORIGINES, DEST, arc } from "./CarteBase";
+import { Cadre, Trace, Point, Hub, Avion, DEST, ALLER } from "./CarteBase";
 
-const LIAISONS = [
-  ["montreal", "chine", 0.35],
-  ["haiti", "dubai", 0.3],
-  ["dakar", "turquie", 0.4],
-  ["abidjan", "chine", 0.15],
-  ["kinshasa", "dubai", 0.5],
-  ["paris", "turquie", 0.4],
-];
-
+// Carte de l'accueil : depuis « Votre position », des avions rejoignent la Turquie, Dubaï et la Chine.
 export default function RouteMap() {
+  const cles = Object.keys(DEST);
   return (
-    <Cadre label="Des voyageurs partis du monde entier vers la Turquie, Dubaï et la Chine">
-      <Regions />
-      <Origines />
-      {LIAISONS.map(([o, d, l], i) => <Trace key={`${o}-${d}`} d={arc(ORIGINES[o], DEST[d], l)} delay={0.4 + i * 0.3} />)}
-      {Object.values(DEST).map((p, i) => <Point key={p.nom} {...p} delay={2.3 + i * 0.2} anneau />)}
+    <Cadre label="Des avions qui partent de votre position vers la Turquie, Dubaï et la Chine">
+      {cles.map((k, i) => <Trace key={k} d={ALLER[k]} delay={0.3 + i * 0.3} />)}
+      {cles.map((k, i) => <Avion key={k} d={ALLER[k]} delay={2.7 + i * 1.4} cycle={[6, 6.6, 8.4][i]} />)}
+      {cles.map((k, i) => <Point key={k} {...DEST[k]} delay={2.2 + i * 0.2} />)}
+      <Hub />
     </Cadre>
   );
 }

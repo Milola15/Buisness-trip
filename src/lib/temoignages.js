@@ -17,4 +17,11 @@
 //   citation: "Une phrase du client.",
 //   youtube: "https://www.youtube.com/watch?v=XXXXXXXXXXX",
 // },
-export const temoignages = [];
+export const temoignages = [
+  {
+    nom: "",
+    profil: "Entrepreneure, USA",
+    voyage: "Business Trip Chine",
+    fichier: "/videos/video-1.mp4",
+  }
+];
