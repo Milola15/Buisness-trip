@@ -22,17 +22,20 @@ export const destinations = [
       { nom: "Spécialisé", tag: "Accompagnement ciblé", texte: "Vous avez une activité ou un secteur précis ? Faites-nous part de vos besoins pour étudier des visites et rencontres ciblées." },
     ],
     tags: [],
+    definitions: {},
     secteurs: "Mode, beauté, accessoires, décoration, équipements et machines.",
   },
   {
     slug: "turquie",
     nom: "Turquie",
-    resume: "Textile, confection, construction et intérieur",
+    resume: "Matériaux de construction, confection, construction et intérieur",
     titre: "Un carrefour d’opportunités pour vos ambitions.",
     description:
-      "Business Trips en Turquie : ateliers de confection, grossistes en textile, matériaux de construction et aménagement intérieur, avec un programme ciblé ou multisectoriel.",
-    texte: "Savoir-faire textile, confection, matériaux de construction : la Turquie est un pays de production reconnu, situé entre l’Europe, l’Afrique et le Moyen-Orient. Le programme peut être ciblé ou combiner plusieurs secteurs selon les préinscriptions et la cohérence des visites.",
-    commerceTitre: "Un savoir-faire textile et industriel aux portes de l’Europe.",
+     "Business Trips en Turquie : matériaux de construction, BTP et aménagement intérieur (avec option textile et confection), selon un programme ciblé ou multisectoriel.",
+texte :
+"Matériaux de construction, second œuvre, aménagement intérieur et savoir-faire textile : la Turquie s'impose comme un hub industriel et de production majeur, idéalement situé entre l’Europe, l’Afrique et le Moyen-Orient. Nos voyages d'affaires s'adaptent à vos besoins : un programme 100 % dédié au BTP et à l'habitat, ou un parcours multisectoriel combinant plusieurs filières selon les préinscriptions et la cohérence des visites.",
+commerceTitre :
+"Un hub industriel de référence pour le BTP et le textile aux portes de l’Europe.",
     commerce: [
       { titre: "Mode, textile et confection", texte: "Istanbul concentre ateliers de confection, grossistes en prêt-à-porter, tissus, tenues de cérémonie et accessoires. Selon le programme, vous pourrez visiter des fabricants et des quartiers de gros, et comparer collections, finitions et conditions de commande." },
       { titre: "Construction et aménagement intérieur", texte: "Carrelage, marbre et pierre naturelle, mobilier, luminaires, quincaillerie, sanitaire : la Turquie produit une large gamme de matériaux pour la construction et la décoration. Des visites de fabricants et de showrooms permettent d’évaluer la qualité avant de commander." },
@@ -45,7 +48,11 @@ export const destinations = [
     ],
     formats: [],
     tags: ["Mode et textile", "Construction et aménagement"],
-    secteurs: "Textile, prêt-à-porter, matériaux, construction et aménagement intérieur.",
+    definitions: {
+      "Mode et textile": "Tout l’univers de l’habillement : tissus, confection, prêt-à-porter, tenues de cérémonie et accessoires. Des visites d’ateliers et de grossistes permettent de comparer les collections, les finitions et les conditions de commande.",
+      "Construction et aménagement": "Les matériaux et équipements pour bâtir et décorer : carrelage, marbre et pierre naturelle, mobilier, luminaires, quincaillerie, sanitaire. Des visites de fabricants et de showrooms permettent d’évaluer la qualité avant de commander.",
+    },
+    secteurs: "Matériaux, construction et aménagement intérieur, textile, prêt-à-porter.",
   },
   {
     slug: "dubai",
@@ -64,11 +71,17 @@ export const destinations = [
     ],
     photos: [
       { src: "/images/destinations/dubai-1.jpg", w: 2000, h: 1333, credit: "Darcey Beau", alt: "Avenue de Dubaï bordée de gratte-ciel, en fin de journée" },
-      { src: "/images/destinations/dubai-2.jpg", w: 1058, h: 1600, credit: "Rumman Amin", alt: "Boutique de textiles et de souvenirs dans un souk de Dubaï, avec foulards et étoles exposés" },
-      { src: "/images/destinations/dubai-3.jpg", w: 1200, h: 1600, credit: "Ken S", alt: "Vitrine de bijoux en or dans un souk de Dubaï" },
+      { src: "/images/destinations/dubai-2.jpg", w: 612, h: 400, credit: "", alt: "Poignée de main entre trois professionnels lors d’une rencontre d’affaires, devant un immeuble de bureaux et des palmiers" },
+      { src: "/images/destinations/dubai-3.jpg", w: 612, h: 407, credit: "", alt: "Femme d’affaires au téléphone, avec les gratte-ciel de Dubaï au crépuscule en arrière-plan" },
     ],
     formats: [],
     tags: ["Networking", "Découverte entrepreneuriale", "Implantation", "Investissement"],
+    definitions: {
+      "Networking": "Le réseautage professionnel : rencontrer des entrepreneurs, des investisseurs et des acteurs du négoce pour nouer des contacts utiles à votre activité et ouvrir des pistes de partenariat.",
+      "Découverte entrepreneuriale": "Comprendre comment on entreprend sur place : l’écosystème local, les secteurs porteurs, les zones d’affaires, et les échanges avec des entrepreneurs installés.",
+      "Implantation": "Installer votre activité dans le pays : choix d’une zone et d’une forme de société, licences, bureaux et démarches à prévoir. Les interventions spécialisées sont soumises à confirmation.",
+      "Investissement": "Explorer des pistes pour placer votre capital dans des projets locaux et rencontrer des professionnels du terrain. Il s’agit de découvrir et de comprendre les opportunités, pas de recevoir un conseil financier personnalisé.",
+    },
     secteurs: "Réseautage, création d’entreprise, investissement et négoce, selon votre projet.",
   },
 ];
@@ -103,7 +116,7 @@ export const offres = [
       "Analyse de votre demande, recherche pour une catégorie de produits, présélection de trois fournisseurs maximum, comparaison des propositions et transmission d’une synthèse avec leurs coordonnées après règlement des honoraires convenus.",
       "Vous effectuez directement vos achats et organisez votre transport.",
     ],
-    note: "Budget de marchandises à partir de 1 000 €. Honoraires communiqués sur devis.",
+    note: "Budget minimum de marchandises  de 1 000 €. Honoraires communiqués sur devis.",
   },
   {
     id: "Intégral",
@@ -113,7 +126,7 @@ export const offres = [
       "Recherche et négociation avec les fournisseurs, coordination des commandes validées, suivi des échanges et préparation de l’expédition, avec des correspondants locaux lorsque nécessaire.",
       "Les achats peuvent être organisés au nom et pour le compte du client selon un mandat et des modalités de paiement juridiquement validés.",
     ],
-    note: "Budget de marchandises à partir de 1 500 €. Honoraires et commission communiqués sur devis.",
+    note: "Budget minimum de marchandises 1 500 €. Honoraires et commission communiqués sur devis.",
   },
 ];
 

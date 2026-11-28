@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
+import TagsDefinitions from "@/components/TagsDefinitions";
 import { destinations, visa } from "@/lib/data";
 import { btnDark, btnGold } from "@/lib/ui";
 
@@ -27,7 +28,7 @@ export default async function Destination({ params }) {
   if (!d) notFound();
   const autres = destinations.filter((x) => x.slug !== d.slug);
   const [vedette, ...extras] = d.photos;
-  const credits = [...new Set(d.photos.map((p) => p.credit))].join(", ");
+  const credits = [...new Set(d.photos.map((p) => p.credit).filter(Boolean))].join(", ");
   const ratio = (p) => (p.w > p.h ? (extras.length === 1 ? "aspect-[16/9]" : "aspect-[3/2]") : "aspect-[4/5]");
   return (
     <>
@@ -68,7 +69,7 @@ export default async function Destination({ params }) {
                 </figure>
               ))}
             </div>
-            <p className="mt-3 text-xs text-brume">Photos : {credits}, via Unsplash.</p>
+            {credits && <p className="mt-3 text-xs text-brume">Photos : {credits}, via Unsplash.</p>}
           </div>
         </section>
       )}
@@ -99,11 +100,7 @@ export default async function Destination({ params }) {
               ))}
             </div>
           )}
-          {d.tags.length > 0 && (
-            <ul className="flex flex-wrap gap-2">
-              {d.tags.map((t) => <li key={t} className="rounded-full border border-marine/20 bg-white px-4 py-1.5 text-sm text-marine">{t}</li>)}
-            </ul>
-          )}
+          {d.tags.length > 0 && <TagsDefinitions tags={d.tags} definitions={d.definitions} />}
           <h2 className="mt-12 font-display text-2xl font-semibold text-marine">Secteurs et marchés visés</h2>
           <p className="mt-2 max-w-2xl text-brume">{d.secteurs}</p>
           <p className="mt-6 max-w-3xl text-sm text-brume">Séjours jusqu’à 8 jours, trajets compris. Dates, activités, inclusions et exclusions sont confirmées avant toute réservation définitive. La préinscription est gratuite et sans engagement.</p>

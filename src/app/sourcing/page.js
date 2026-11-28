@@ -64,7 +64,7 @@ const Coche = () => (
 
 export default function Sourcing() {
   const marches = destinations.map((d) => ({ ...d, photo: d.photos[1] || d.photos[0] }));
-  const credits = [...new Set(marches.map((m) => m.photo.credit))].join(", ");
+  const credits = [...new Set(marches.map((m) => m.photo.credit).filter(Boolean))].join(", ");
   return (
     <>
       <PageHero titre="Vous avez un besoin ? Nous recherchons les solutions." intro="Marchandises destinées à la revente, équipements professionnels, machines, matériaux ou produits spécifiques : nous étudions votre projet et recherchons des solutions d’approvisionnement adaptées. Basée en Côte d’Ivoire, N&K Global Business accompagne les clients où qu’ils se trouvent.">
@@ -116,7 +116,7 @@ export default function Sourcing() {
             ))}
           </ul>
           <p className="mt-6 max-w-3xl text-brume">Vous recherchez des produits dans un autre pays ou un autre secteur ? Présentez-nous votre besoin : nous étudions aussi les demandes hors de nos marchés prioritaires, sous réserve de faisabilité et de conformité réglementaire.</p>
-          <p className="mt-3 text-xs text-brume">Photos : {credits}, via Unsplash.</p>
+          {credits && <p className="mt-3 text-xs text-brume">Photos : {credits}, via Unsplash.</p>}
         </div>
       </section>
 
